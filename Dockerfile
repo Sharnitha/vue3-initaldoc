@@ -18,6 +18,6 @@ COPY . .
 # build app for production with minification
 RUN npm run build
 
-EXPOSE 80
+EXPOSE 80 2222 22
 
 ENTRYPOINT [ "npm","run", "serve" ]
