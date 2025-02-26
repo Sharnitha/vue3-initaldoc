@@ -16,7 +16,7 @@ jobs:
       - name: Docker Build
         id: set_env
         run: 
-          docker build -t appservicedeployment:latest .
+          docker build -t sharnidemo.azurecr.io/demoenv:${{ github.run_id }} .
           
       - name: azure container registry
         run: |
