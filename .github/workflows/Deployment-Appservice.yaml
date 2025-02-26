@@ -17,9 +17,6 @@ jobs:
         id: set_env
         run: 
           docker build -t appservicedeployment:latest .
-      - name: Trivy Scan
-        run: 
-          trivy image --severity "HIGH,CRITICAL" --vuln-type "os,library" --exit-code "0" githubcisharnidemo.azurecr.io/demoenv:${{ github.run_id }}
           
       - name: azure container registry
         run: |
